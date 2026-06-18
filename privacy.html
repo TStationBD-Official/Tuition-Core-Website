@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Tuition Core</title>
+    <meta name="package" content="tuition_core">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-dark: #001a33;
+            --secondary-dark: #0d2d4a;
+            --accent-gold: #fdb813;
+            --text-light: #f0f0f0;
+            --text-muted: #b0b0b0;
+            --border-color: #1a3a52;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--primary-dark);
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        header {
+            background: rgba(0, 26, 51, 0.95);
+            border-bottom: 2px solid var(--border-color);
+            padding: 1.5rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-content a {
+            color: var(--accent-gold);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+
+        .header-content a:hover {
+            color: var(--text-light);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            color: var(--accent-gold);
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin: 2.5rem 0 1.2rem 0;
+            color: var(--accent-gold);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.8rem;
+            font-weight: 700;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            margin: 1.8rem 0 0.8rem 0;
+            color: var(--text-light);
+            font-weight: 700;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            color: var(--text-muted);
+            line-height: 1.9;
+            font-weight: 400;
+        }
+
+        ul, ol {
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        ul li, ol li {
+            margin-bottom: 0.8rem;
+            color: var(--text-muted);
+            line-height: 1.9;
+            font-weight: 400;
+        }
+
+        .update-date {
+            color: var(--text-muted);
+            font-style: italic;
+            margin-bottom: 2rem;
+            padding: 1.2rem;
+            background: linear-gradient(135deg, #0d2d4a 0%, #1a3a52 100%);
+            border-left: 4px solid var(--accent-gold);
+            border-radius: 6px;
+        }
+
+        strong {
+            color: var(--accent-gold);
+            font-weight: 600;
+        }
+
+        a {
+            color: var(--accent-gold);
+            text-decoration: underline;
+        }
+
+        a:hover {
+            color: #ffc93d;
+        }
+
+        footer {
+            background: #000;
+            border-top: 1px solid var(--border-color);
+            padding: 2rem;
+            text-align: center;
+            color: var(--text-muted);
+            margin-top: 3rem;
+            font-weight: 500;
+        }
+
+        .back-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #fdb813 0%, #ffc93d 100%);
+            color: #001a33;
+            padding: 0.8rem 1.8rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            transition: all 0.3s;
+            font-size: 0.95rem;
+        }
+
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(253, 184, 19, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1 style="margin: 0; font-size: 1.5rem;">Privacy Policy</h1>
+            <a href="website.html">← Back to Home</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <a href="website.html" class="back-button">← Back to Home</a>
+
+        <div class="update-date">
+            <strong>Last Updated:</strong> June 18, 2026 | <strong>Version:</strong> 1.0.0 | <strong>Package:</strong> tuition_core
+        </div>
+
+        <h1>Privacy Policy</h1>
+
+        <h2>1. Introduction & Data Controller</h2>
+        <p>Tuition Core Inc. ("we," "us," "our") operates the Tuition Core application (mobile, web, desktop). This Privacy Policy explains our practices regarding collection, use, storage, protection, and your rights regarding personal data.</p>
+        <p>By using Tuition Core, you consent to data practices described herein. If you do not agree, do not use the Service.</p>
+        <p><strong>Data Controller:</strong> Tuition Core Inc. | <strong>Contact:</strong> privacy@tuitioncore.com</p>
+
+        <h2>2. What Information We Collect</h2>
+
+        <h3>2.1 Account & Authentication Data</h3>
+        <ul>
+            <li><strong>Email Address:</strong> Required for login, password recovery, account notifications</li>
+            <li><strong>Password:</strong> Hashed with bcrypt; never stored in plain text</li>
+            <li><strong>Full Name:</strong> Display name in profiles, reports, class lists</li>
+            <li><strong>Date of Birth (optional):</strong> Age verification, reporting</li>
+            <li><strong>Profile Picture (optional):</strong> Avatar for social features, stored on Firebase Cloud Storage</li>
+            <li><strong>Phone Number (optional):</strong> Guardian contact, emergency notifications</li>
+            <li><strong>User Role(s):</strong> Student, Guardian, Admin, Super Admin designation(s)</li>
+            <li><strong>Institution/Organization (optional):</strong> School/tutoring center affiliation for reporting</li>
+        </ul>
+
+        <h3>2.2 Educational & Academic Data</h3>
+        <ul>
+            <li><strong>Exam Responses:</strong> All answers submitted during exams (stored indefinitely for archive)</li>
+            <li><strong>Exam Scores & Results:</strong> Numerical scores, pass/fail status, percentile rankings</li>
+            <li><strong>Question-Level Performance:</strong> Correct/incorrect flags, time spent per question</li>
+            <li><strong>Attendance Records:</strong> Class attendance (present/absent/excused), attendance percentage</li>
+            <li><strong>Assignment Data:</strong> Submissions, due dates, feedback comments, grades</li>
+            <li><strong>Progress Metrics:</strong> Learning milestones, achievement badges, skill assessments</li>
+            <li><strong>Study Materials:</strong> Downloaded resources, bookmarked content, search history</li>
+            <li><strong>Exam Metadata:</strong> Time taken, attempts, review history, shuffle seed (for consistency)</li>
+        </ul>
+
+        <h3>2.3 Subscription & Payment Data</h3>
+        <ul>
+            <li><strong>Payment Method:</strong> Credit/debit card info (processed by Stripe/PayPal, NOT stored by Tuition Core)</li>
+            <li><strong>Billing Address:</strong> For invoicing and PCI compliance verification</li>
+            <li><strong>Transaction History:</strong> Purchase date, amount, currency, payment status, transaction ID</li>
+            <li><strong>Subscription Plan:</strong> Current tier (Free/Starter/Pro/Expert/Premium), start/end dates</li>
+            <li><strong>Add-on Purchases:</strong> Extra students, exams, duration extensions, ad-free add-ons</li>
+            <li><strong>Renewal Status:</strong> Auto-renewal enabled/disabled, payment method failures</li>
+            <li><strong>Invoice Metadata:</strong> Invoice numbers, tax jurisdiction, receipt PDFs</li>
+        </ul>
+
+        <h3>2.4 Communication & Messaging Data</h3>
+        <ul>
+            <li><strong>Private Messages:</strong> All text sent via in-app chat (encrypted in transit)</li>
+            <li><strong>Message Metadata:</strong> Timestamp, sender, recipient, read status, attachments</li>
+            <li><strong>Support Tickets:</strong> Your communications with our support team, resolution history</li>
+            <li><strong>Email Communications:</strong> Newsletters, transactional emails, promotional content</li>
+            <li><strong>Notification Preferences:</strong> Which notifications you've opted in/out of</li>
+            <li><strong>Social Posts & Comments:</strong> Content you create on the feed, engagement metrics (likes, shares)</li>
+        </ul>
+
+        <h3>2.5 Device & Technical Data</h3>
+        <ul>
+            <li><strong>Device Information:</strong> OS type, OS version, device model, app version</li>
+            <li><strong>Device Identifier:</strong> Unique device ID (for multi-device session management)</li>
+            <li><strong>IP Address:</strong> Source IP, approximate geolocation (city-level, for analytics)</li>
+            <li><strong>Firebase Cloud Messaging Token:</strong> FCM token per device (for push notifications)</li>
+            <li><strong>Usage Analytics:</strong> Screens visited, features accessed, time spent per section</li>
+            <li><strong>Interaction Events:</strong> Button clicks, form submissions, exam starts/completions</li>
+            <li><strong>Crash Reports & Logs:</strong> Error messages, stack traces, app stability metrics</li>
+            <li><strong>Network Metrics:</strong> Connection type, latency, bandwidth (for performance optimization)</li>
+            <li><strong>Firebase Analytics:</strong> Session duration, user retention, conversion funnels</li>
+        </ul>
+
+        <h3>2.6 Google Drive Integration Data</h3>
+        <ul>
+            <li><strong>Google Account Email:</strong> Associated with your Google Drive authorization</li>
+            <li><strong>File Metadata:</strong> File names, sizes, modification dates, file paths in Drive</li>
+            <li><strong>MD5 Checksums:</strong> Hashes for file deduplication and integrity checking</li>
+            <li><strong>Upload/Download History:</strong> Which files synced when, sync success/failure logs</li>
+            <li><strong>Storage Quota:</strong> Your Google Drive storage usage</li>
+            <li><strong>Google Authorization Token:</strong> Refresh token for persistent access (encrypted in Firestore)</li>
+        </ul>
+
+        <h3>2.7 Advertising Data (via Google AdMob)</h3>
+        <ul>
+            <li><strong>Ad Impressions:</strong> Which ads you viewed, placement, timestamp</li>
+            <li><strong>Ad Engagement:</strong> Clicks on ads, rewarded video completions</li>
+            <li><strong>Advertising ID:</strong> Google Advertising ID (AAID/IDFA) for ad targeting</li>
+            <li><strong>Behavioral Targeting:</strong> Inferred interests based on app usage (managed by Google)</li>
+        </ul>
+
+        <h2>3. How We Use Your Information</h2>
+
+        <h3>3.1 Service Delivery & Core Functionality</h3>
+        <ul>
+            <li>Creating and maintaining your account and user profile</li>
+            <li>Authenticating login and managing multi-device sessions</li>
+            <li>Delivering exams, storing answers, calculating scores</li>
+            <li>Managing student rosters with subscription-based limits (e.g., "30 students max on Starter plan")</li>
+            <li>Enabling messaging and social feed features</li>
+            <li>Tracking attendance, assignments, and progress</li>
+            <li>Processing subscription payments and managing billing</li>
+            <li>Syncing data across your devices</li>
+            <li>Providing Google Drive file upload/download functionality</li>
+        </ul>
+
+        <h3>3.2 Personalization & User Experience</h3>
+        <ul>
+            <li>Customizing dashboards and UI based on your role (Student/Guardian/Admin)</li>
+            <li>Remembering preferences (notification settings, theme, language)</li>
+            <li>Recommending content based on exam performance and learning patterns</li>
+            <li>Suggesting peers for group discussions or study circles</li>
+            <li>Showing relevant ads based on subscription tier</li>
+        </ul>
+
+        <h3>3.3 Analytics, Insights & Improvement</h3>
+        <ul>
+            <li>Generating student progress reports and performance analytics</li>
+            <li>Creating admin statistics dashboards (student counts, exam trends, payment analysis)</li>
+            <li>Analyzing app usage to identify popular features</li>
+            <li>Measuring user engagement and retention for product improvements</li>
+            <li>A/B testing new features with anonymized user cohorts</li>
+            <li>Aggregating anonymized data for industry benchmarking</li>
+        </ul>
+
+        <h3>3.4 Communications & Notifications</h3>
+        <ul>
+            <li>Sending transactional emails (registration confirmation, password reset, receipts)</li>
+            <li>Delivering push notifications (exam reminders, grade updates, class announcements)</li>
+            <li>Sending subscription renewal reminders and expiry warnings</li>
+            <li>Notifying admins of new student requests or exam submissions</li>
+            <li>Sending newsletters and feature announcements (if opted in)</li>
+            <li>Alerting guardians of student attendance or grade changes</li>
+        </ul>
+
+        <h3>3.5 Security, Compliance & Legal</h3>
+        <ul>
+            <li>Detecting and preventing fraud (payment fraud, account takeover, cheating)</li>
+            <li>Ensuring account security and preventing unauthorized access</li>
+            <li>Logging suspicious activity for security audits</li>
+            <li>Complying with legal obligations (court orders, law enforcement requests, tax reporting)</li>
+            <li>Enforcing Terms & Conditions and resolving disputes</li>
+            <li>Protecting intellectual property rights</li>
+        </ul>
+
+        <h3>3.6 Marketing & Engagement</h3>
+        <ul>
+            <li>Sending promotional emails (new features, special offers, plan upgrades) — you may opt out</li>
+            <li>Conducting surveys and collecting feedback</li>
+            <li>Retargeting users on social media platforms (Facebook, Instagram) if consented</li>
+            <li>Measuring ad campaign effectiveness</li>
+        </ul>
+
+        <h2>4. Data Storage & Security</h2>
+
+        <h3>4.1 Where We Store Data</h3>
+        <ul>
+            <li><strong>Cloud Infrastructure:</strong> Google Firebase & Google Cloud (primary)</li>
+            <li><strong>Database:</strong> Cloud Firestore with encryption-at-rest</li>
+            <li><strong>File Storage:</strong> Firebase Cloud Storage (exams, profiles, backups)</li>
+            <li><strong>Local Device Cache:</strong> Hive encrypted key-value store (settings, offline access)</li>
+            <li><strong>Geographic Region:</strong> Primary servers in United States; redundancy across multiple regions</li>
+        </ul>
+
+        <h3>4.2 Data Retention Periods</h3>
+        <ul>
+            <li><strong>Active Accounts:</strong> All data retained indefinitely during active subscription/Free Plan use</li>
+            <li><strong>Upon Account Deletion:</strong> Data marked for deletion, permanently removed after 30 days (except legally mandated retention)</li>
+            <li><strong>Exam Archives:</strong> Exam submissions and scores retained indefinitely for academic records</li>
+            <li><strong>Payment Records:</strong> Retained 7 years for tax and legal compliance</li>
+            <li><strong>Server Logs:</strong> Retained 30 days for security and debugging purposes</li>
+            <li><strong>Backup Copies:</strong> Retained 90 days for disaster recovery (then permanently deleted)</li>
+        </ul>
+
+        <h3>4.3 Security Measures</h3>
+        <ul>
+            <li><strong>Data Encryption in Transit:</strong> TLS 1.3 for all API communications (HTTPS)</li>
+            <li><strong>Data Encryption at Rest:</strong> AES-256 encryption on Firebase and Cloud Storage</li>
+            <li>< <strong>Password Security:</strong> bcrypt with salt factor ≥12</li>
+            <li><strong>Local Device Storage:</strong> Hive encryption for sensitive cached data</li>
+            <li><strong>Access Controls:</strong> Role-based access control (RBAC); admins cannot access student passwords</li>
+            <li><strong>Multi-Factor Authentication:</strong> Optional 2FA available for high-risk accounts</li>
+            <li><strong>API Security:</strong> Rate limiting, input validation, CORS restrictions</li>
+            <li><strong>Regular Security Audits:</strong> Quarterly penetration testing, vulnerability scanning</li>
+            <li><strong>Incident Response:</strong> Security breach notification within 72 hours (if applicable law requires)</li>
+        </ul>
+
+        <h3>4.4 Your Responsibility</h3>
+        <p>You are responsible for:</p>
+        <ul>
+            <li>Keeping your password confidential and changing it regularly</li>
+            <li>Logging out on shared/public devices</li>
+            <li>Reviewing FCM tokens for unauthorized devices</li>
+            <li>Monitoring your subscription payment method for fraud</li>
+            <li>Reporting suspected breaches immediately to privacy@tuitioncore.com</li>
+        </ul>
+
+        <h2>5. Third-Party Services & Data Sharing</h2>
+
+        <h3>5.1 Firebase & Google Cloud</h3>
+        <p>Data is processed on Google infrastructure per <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>. Google may use data aggregates for service improvement and Google product recommendations. You are subject to Google's Data Processing Agreement.</p>
+
+        <h3>5.2 Google Drive API</h3>
+        <p>When you authorize Google Drive sync, we request scope: drive.file (specific file access only). We do NOT request:</p>
+        <ul>
+            <li>drive.appData (hidden app files)</li>
+            <li>drive (full Drive access)</li>
+            <li>openid (OAuth identity)</li>
+        </ul>
+        <p>Revoke access anytime at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</p>
+
+        <h3>5.3 Payment Processors (Stripe, PayPal)</h3>
+        <p>Credit card data is processed directly by Stripe/PayPal, NOT stored by Tuition Core. We only store:</p>
+        <ul>
+            <li>Last 4 digits of card</li>
+            <li>Card type (Visa, Mastercard)</li>
+            <li>Expiry month/year</li>
+            <li>Billing address</li>
+        </ul>
+        <p>Tuition Core maintains PCI DSS Level 1 compliance via payment processor.</p>
+
+        <h3>5.4 Firebase Cloud Messaging (FCM)</h3>
+        <p>FCM tokens are stored securely in Firestore and used exclusively for push notifications. Tokens are never sold or shared. You may view registered devices in Account Settings and revoke tokens anytime.</p>
+
+        <h3>5.5 Google Analytics & Firebase Analytics</h3>
+        <p>Usage data is sent to Google Analytics 4 and Firebase Analytics for aggregated insights. Firebase does NOT collect personally identifiable information (emails, user IDs linked to names). Data is anonymized at collection. You may opt out via device settings ("Share device analytics").</p>
+
+        <h3>5.6 Google AdMob</h3>
+        <p>Ad platforms (AdMob, Google Ad Manager) collect:</p>
+        <ul>
+            <li>Advertising ID (AAID on Android, IDFA on iOS)</li>
+            <li>IP address</li>
+            <li>Browser user-agent</li>
+            <li>General location (country/region)</li>
+        </ul>
+        <p>This is governed by <a href="https://policies.google.com/privacy">Google's Advertising Policies</a>. Manage ad preferences at <a href="https://adssettings.google.com">adssettings.google.com</a>.</p>
+
+        <h3>5.7 Data Sharing Policy</h3>
+        <p>We <strong>DO NOT sell your personal data</strong> to third parties. We share data only:</p>
+        <ul>
+            <li><strong>Service Providers:</strong> With vendors necessary to operate Tuition Core (Firebase, Stripe, Google, SendGrid) under Data Processing Agreements requiring confidentiality and security</li>
+            <li><strong>Your Consent:</strong> With third parties you explicitly authorize (e.g., "Share results with [Institution]")</li>
+            <li><strong>Legal Requirement:</strong> With law enforcement/government upon court order, subpoena, or legal obligation</li>
+            <li><strong>Fraud Prevention:</strong> With fraud detection services to prevent financial crimes</li>
+            <li><strong>Business Transfer:</strong> In case of merger, acquisition, or asset sale, we will notify you and provide opt-out opportunity before data transfers</li>
+        </ul>
+
+        <h2>6. Your Privacy Rights & Choices</h2>
+
+        <h3>6.1 Right to Access</h3>
+        <p>You have the right to access your personal data in a structured, commonly-used format. Submit a request to privacy@tuitioncore.com with:</p>
+        <ul>
+            <li>Your full name and email</li>
+            <li>Proof of identity (copy of government ID)</li>
+        </ul>
+        <p>We will respond within 30 days with a downloadable data export (JSON/CSV format).</p>
+
+        <h3>6.2 Right to Correct</h3>
+        <p>You may correct inaccurate data anytime via Account Settings or by contacting privacy@tuitioncore.com. We will correct inaccuracies within 15 business days.</p>
+
+        <h3>6.3 Right to Delete (Right to be Forgotten)</h3>
+        <p>You may request deletion of your account and all associated data. Process:</p>
+        <ol>
+            <li>Account Settings > Delete Account > Confirm</li>
+            <li>Or email privacy@tuitioncore.com with deletion request</li>
+            <li>Data marked for deletion; permanently removed after 30 days (unless legally required to retain)</li>
+            <li>Backup copies deleted within 90 days</li>
+        </ol>
+        <p><strong>Exceptions:</strong> Exam archives and payment records may be retained if required by law or institutional policy.</p>
+
+        <h3>6.4 Right to Data Portability</h3>
+        <p>You may request your data in machine-readable format (JSON, CSV). Email privacy@tuitioncore.com to export:</p>
+        <ul>
+            <li>Account profile data</li>
+            <li>Exam submissions and scores</li>
+            <li>Attendance and grades</li>
+            <li>Messages and posts</li>
+        </ul>
+
+        <h3>6.5 Right to Restrict Processing</h3>
+        <p>You may restrict how we use your data (e.g., "Don't use for analytics" or "Don't send marketing emails"). Email privacy@tuitioncore.com with specifics. We will honor reasonable restrictions without affecting core functionality.</p>
+
+        <h3>6.6 Right to Withdraw Consent</h3>
+        <p>For optional data (marketing emails, analytics), you may opt out anytime:</p>
+        <ul>
+            <li><strong>Email Unsubscribe:</strong> Click "Unsubscribe" link in any marketing email</li>
+            <li><strong>Push Notifications:</strong> Disable per device in Account Settings or OS notification preferences</li>
+            <li><strong>Advertising Tracking:</strong> Disable "Share Device Analytics" in OS settings</li>
+            <li><strong>Google Drive Sync:</strong> Revoke access in Google Account Settings</li>
+        </ul>
+
+        <h3>6.7 GDPR Rights (EU Residents)</h3>
+        <p>If you are in the European Union, you have additional rights under GDPR:</p>
+        <ul>
+            <li>Right to object to automated decision-making (we don't use AI for high-impact decisions)</li>
+            <li>Right to lodge a complaint with your data protection authority</li>
+            <li>Right to data transfer to another provider</li>
+        </ul>
+        <p>Our Data Protection Officer: dpo@tuitioncore.com</p>
+
+        <h3>6.8 CCPA Rights (California Residents)</h3>
+        <p>If you are a California resident, you have rights under CCPA:</p>
+        <ul>
+            <li>Right to know what personal data we collect, use, share</li>
+            <li>Right to delete personal data (with limited exceptions)</li>
+            <li>Right to opt-out of sale/sharing of data (we don't sell data)</li>
+            <li>Right to non-discrimination for exercising CCPA rights</li>
+        </ul>
+
+        <h2>7. Children's Privacy (COPPA)</h2>
+        <p>Tuition Core is intended for users 13+ years. We do not knowingly collect data from children under 13.</p>
+        <p>For students under 18:</p>
+        <ul>
+            <li>Parents/guardians may monitor student activity via Guardian role</li>
+            <li>Parents may request data access or deletion at any time</li>
+            <li>We comply with COPPA and applicable children's privacy laws</li>
+            <li>If we discover a user is under 13, we immediately delete their account and notify parents</li>
+        </ul>
+
+        <h2>8. Notifications & Communications</h2>
+
+        <h3>8.1 Notification Types</h3>
+        <ul>
+            <li><strong>Transactional (Required):</strong> Registration, password reset, payment confirmations, exam invites</li>
+            <li><strong>Educational (Opt-in by role):</strong> Grade updates, class reminders, assignment due dates</li>
+            <li><strong>Administrative:</strong> Subscription renewal reminders, payment failures, security alerts</li>
+            <li><strong>Marketing (Opt-out available):</strong> New features, promotional offers, newsletters</li>
+        </ul>
+
+        <h3>8.2 Managing Preferences</h3>
+        <ul>
+            <li><strong>In-App:</strong> Account Settings > Notifications > toggle per notification type</li>
+            <li><strong>Email:</strong> "Unsubscribe" link at bottom of emails</li>
+            <li><strong>Device:</strong> OS Settings > Apps > Tuition Core > Notifications</li>
+        </ul>
+
+        <h3>8.3 Multi-Device Notifications</h3>
+        <p>Each device stores its own FCM token. Notifications sent to ALL active devices unless you disable them per device. View registered devices in Account Settings > Devices.</p>
+
+        <h2>9. Advertising & Ad Personalization</h2>
+
+        <h3>9.1 Ad Types</h3>
+        <ul>
+            <li><strong>Banner Ads:</strong> 320×50 or 320×100 in-app placements</li>
+            <li><strong>Interstitial Ads:</strong> Full-screen ads between screens (dismissible)</li>
+            <li><strong>Rewarded Ads:</strong> Optional video ads in exchange for in-app rewards (you can skip)</li>
+        </ul>
+
+        <h3>9.2 When Ads Appear</h3>
+        <ul>
+            <li><strong>Free Plan:</strong> Ads enabled</li>
+            <li><strong>Paid Plans (Starter/Pro/Expert):</strong> Ads enabled unless ad-free add-on purchased</li>
+            <li><strong>Premium Plan:</strong> Ad-free by default</li>
+            <li><strong>Yearly Billing:</strong> Ad-free for billing period</li>
+        </ul>
+
+        <h3>9.3 Ad Personalization & Your Choices</h3>
+        <p>Google AdMob uses your Advertising ID (AAID/IDFA) for interest-based targeting. You may:</p>
+        <ul>
+            <li><strong>Android:</strong> Settings > Google > Manage your Google Account > Data & Privacy > Ad settings</li>
+            <li><strong>iOS:</strong> Settings > Privacy > Apple Advertising > Personalized Ads (toggle off)</li>
+            <li><strong>Web:</strong> Visit <a href="https://adssettings.google.com">adssettings.google.com</a></li>
+        </ul>
+        <p>Opting out doesn't eliminate ads; it only makes them non-personalized.</p>
+
+        <h2>10. Updates to Privacy Policy</h2>
+        <p>We may update this Privacy Policy. Changes take effect immediately upon posting to the Service. Material changes will be announced via:</p>
+        <ul>
+            <li>Email notification to your registered address</li>
+            <li>In-app alert on login</li>
+            <li>Prominent banner on the website</li>
+        </ul>
+        <p>Continued use after notice constitutes acceptance of updated policies.</p>
+
+        <h2>11. Contact & Support</h2>
+        <p>For privacy questions or requests:</p>
+        <p>
+            <strong>Data Protection Contact:</strong><br>
+            Email: <a href="mailto:privacy@tuitioncore.com">privacy@tuitioncore.com</a><br>
+            Support: <a href="mailto:support@tuitioncore.com">support@tuitioncore.com</a><br>
+            Website: <a href="https://tuitioncore.com">tuitioncore.com</a><br>
+            Package: tuition_core (v1.0.0)<br>
+            Response Time: 7-10 business days
+        </p>
+        <p>
+            <strong>Data Protection Officer (GDPR/CCPA):</strong><br>
+            Email: <a href="mailto:dpo@tuitioncore.com">dpo@tuitioncore.com</a>
+        </p>
+        <p>
+            <strong>Regulatory Complaints:</strong><br>
+            If unsatisfied with our response, you may lodge a complaint with your local data protection authority (EU: relevant DPA; US CA: California Attorney General).
+        </p>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Tuition Core Inc. All rights reserved.</p>
+        <p><a href="website.html" style="color: var(--accent-gold); text-decoration: none;">Back to Home</a> | <a href="terms.html" style="color: var(--accent-gold); text-decoration: none;">Terms & Conditions</a></p>
+    </footer>
+</body>
+</html>
