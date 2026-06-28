@@ -1206,9 +1206,9 @@
     <script>
     (function() {
       var zones = [
-        'https://omg10.com/4/ZONE_ID_1',
-        'https://omg10.com/4/ZONE_ID_2',
-        'https://omg10.com/4/ZONE_ID_3'
+        'https://omg10.com/4/11211859',
+        'https://omg10.com/4/11211860',
+        'https://omg10.com/4/11211861'
       ];
       var COOLDOWN = 3 * 60 * 1000;
       var lastOpened = {};
@@ -1290,17 +1290,17 @@
         <div class="mtag-slide active">
           <span class="mtag-slide-icon">🎓</span>
           <span class="mtag-slide-text"><strong>Study Smarter:</strong> Top tools to help students excel online</span>
-          <button class="mtag-slide-btn" onclick="mtagOpen('https://omg10.com/4/ZONE_ID_1')">Explore →</button>
+          <button class="mtag-slide-btn" onclick="mtagOpen('https://omg10.com/4/11211859')">Explore →</button>
         </div>
         <div class="mtag-slide">
           <span class="mtag-slide-icon">📚</span>
           <span class="mtag-slide-text"><strong>Free Resources:</strong> Unlock premium study materials today</span>
-          <button class="mtag-slide-btn" onclick="mtagOpen('https://omg10.com/4/ZONE_ID_2')">Get Free →</button>
+          <button class="mtag-slide-btn" onclick="mtagOpen('https://omg10.com/4/11211860')">Get Free →</button>
         </div>
         <div class="mtag-slide">
           <span class="mtag-slide-icon">💡</span>
           <span class="mtag-slide-text"><strong>Boost Grades:</strong> Techniques used by top-scoring students</span>
-          <button class="mtag-slide-btn" onclick="mtagOpen('https://omg10.com/4/ZONE_ID_3')">Learn →</button>
+          <button class="mtag-slide-btn" onclick="mtagOpen('https://omg10.com/4/11211861')">Learn →</button>
         </div>
       </div>
       <button id="mtag-bar-close" title="Close">✕</button>
@@ -1330,114 +1330,148 @@
     <!-- Side Floating Widgets -->
     <style>
     .mtag-side-widget {
-      position: fixed; top: 50%; transform: translateY(-50%);
+      position: fixed; bottom: 80px;
       z-index: 9990; display: flex; align-items: stretch;
       font-family: 'Poppins', sans-serif;
     }
     #mtag-side-r { right: 0; flex-direction: row-reverse; }
     #mtag-side-l { left: 0; flex-direction: row; }
+
+    /* Tab pull handle */
     .mtag-side-tab {
       background: linear-gradient(180deg,#fdb813,#ffc93d);
-      color: #000a15; font-size: 0.6rem; font-weight: 800;
-      padding: 12px 8px; cursor: pointer; border-radius: 8px 0 0 8px;
-      letter-spacing: 0.1em; writing-mode: vertical-lr; user-select: none;
+      color: #000a15; font-size: 0.5rem; font-weight: 900;
+      padding: 14px 7px; cursor: pointer; border-radius: 8px 0 0 8px;
+      letter-spacing: 0.12em; writing-mode: vertical-lr; user-select: none;
+      line-height: 1.2; display: flex; align-items: center; justify-content: center;
     }
-    #mtag-side-l .mtag-side-tab {
-      background: linear-gradient(180deg,#06B6D4,#0284C7);
-      border-radius: 0 8px 8px 0; transform: rotate(180deg);
-    }
+    #mtag-side-l .mtag-side-tab { border-radius: 0 8px 8px 0; transform: rotate(180deg); }
+
+    /* Panel */
     .mtag-side-panel {
-      width: 110px; background: #000a15;
-      border: 1px solid rgba(253,184,19,0.3);
+      width: 138px; background: linear-gradient(160deg,#0d2d4a 0%,#000a15 100%);
+      border: 1px solid rgba(253,184,19,0.35);
       overflow: hidden; max-width: 0; opacity: 0;
       padding-left: 0; padding-right: 0;
       transition: max-width 0.4s ease, opacity 0.4s ease, padding 0.4s ease;
     }
-    .mtag-side-panel.open { max-width: 110px; opacity: 1; padding: 10px; }
-    #mtag-side-r .mtag-side-panel { border-right: none; border-radius: 8px 0 0 8px; }
-    #mtag-side-l .mtag-side-panel { border-left: none; border-radius: 0 8px 8px 0; }
-    .mtag-side-panel-header {
-      display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;
+    .mtag-side-panel.open { max-width: 138px; opacity: 1; padding: 11px 11px 9px; }
+    #mtag-side-r .mtag-side-panel { border-right: none; border-radius: 10px 0 0 10px; }
+    #mtag-side-l .mtag-side-panel { border-left: none; border-radius: 0 10px 10px 0; }
+
+    /* Brand header */
+    .mtag-side-brand {
+      display: flex; align-items: center; gap: 6px;
+      padding-bottom: 8px; margin-bottom: 9px;
+      border-bottom: 1px solid rgba(253,184,19,0.25);
     }
-    .mtag-side-panel-title { font-size: 0.6rem; color: #b0b0b0; text-transform: uppercase; letter-spacing: 0.06em; }
+    .mtag-side-brand-icon { font-size: 1rem; line-height: 1; flex-shrink: 0; }
+    .mtag-side-brand-name {
+      font-size: 0.7rem; font-weight: 800; letter-spacing: 0.01em; white-space: nowrap;
+      background: linear-gradient(135deg,#fdb813,#ffc93d);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+
+    /* Slides */
     .mtag-side-slide { display: none; }
     .mtag-side-slide.active { display: block; }
-    .mtag-side-slide-icon { font-size: 1.4rem; display: block; text-align: center; margin-bottom: 4px; }
-    .mtag-side-slide-title { font-size: 0.7rem; font-weight: 700; color: #f0f0f0; margin-bottom: 4px; }
-    .mtag-side-slide-text  { font-size: 0.63rem; color: #b0b0b0; line-height: 1.3; margin-bottom: 8px; }
+    .mtag-side-slide-icon { font-size: 1.35rem; display: block; text-align: center; margin-bottom: 5px; }
+    .mtag-side-slide-title { font-size: 0.69rem; font-weight: 700; color: #f0f0f0; margin-bottom: 3px; line-height: 1.2; }
+    .mtag-side-slide-text  { font-size: 0.6rem; color: #b0b0b0; line-height: 1.4; margin-bottom: 9px; }
     .mtag-side-slide-btn {
       display: block; width: 100%; background: linear-gradient(135deg,#fdb813,#ffc93d);
-      color: #000a15; border: none; border-radius: 5px;
-      padding: 5px 4px; font-size: 0.63rem; font-weight: 700; cursor: pointer; text-align: center;
-      font-family: 'Poppins', sans-serif;
+      color: #000a15; border: none; border-radius: 6px;
+      padding: 6px 4px; font-size: 0.6rem; font-weight: 700; cursor: pointer; text-align: center;
+      font-family: 'Poppins', sans-serif; letter-spacing: 0.02em;
+      transition: opacity 0.2s;
     }
-    #mtag-side-l .mtag-side-slide-btn { background: linear-gradient(135deg,#06B6D4,#0284C7); color: #fff; }
+    .mtag-side-slide-btn:hover { opacity: 0.88; }
+
+    /* Footer label */
+    .mtag-side-footer {
+      margin-top: 8px; padding-top: 6px;
+      border-top: 1px solid rgba(253,184,19,0.15);
+      text-align: center;
+    }
+    .mtag-side-ad-label { font-size: 0.48rem; color: #b0b0b0; letter-spacing: 0.12em; text-transform: uppercase; }
+
+    /* Mobile */
     @media(max-width:768px){
       .mtag-side-widget { top: auto; bottom: 58px; transform: none; flex-direction: column; align-items: flex-end; }
       #mtag-side-l { align-items: flex-start; }
       .mtag-side-panel { display: none; }
       .mtag-side-tab {
         writing-mode: horizontal-tb; transform: none !important;
-        width: 48px; height: 48px; padding: 0; border-radius: 50%;
-        display: flex; align-items: center; justify-content: center;
-        font-size: 1.2rem; letter-spacing: 0;
+        width: 44px; height: 44px; padding: 0; border-radius: 50%;
+        font-size: 0.95rem; letter-spacing: 0;
       }
     }
     </style>
+
+    <!-- Right Side Widget -->
     <div id="mtag-side-r" class="mtag-side-widget">
-      <div class="mtag-side-tab" id="mtag-tab-r" onclick="mtagTabClick('r')">AD</div>
+      <div class="mtag-side-tab" id="mtag-tab-r" onclick="mtagTabClick('r')">Tuition Core</div>
       <div class="mtag-side-panel" id="mtag-panel-r">
-        <div class="mtag-side-panel-header">
-          <span class="mtag-side-panel-title">Sponsored</span>
-          <span class="mtag-ad-chip">AD</span>
+        <div class="mtag-side-brand">
+          <span class="mtag-side-brand-icon">🎓</span>
+          <span class="mtag-side-brand-name">Tuition Core</span>
         </div>
-        <div class="mtag-side-slide active" data-url="https://omg10.com/4/ZONE_ID_1">
-          <span class="mtag-side-slide-icon">🔥</span>
-          <div class="mtag-side-slide-title">Hot Deal</div>
-          <div class="mtag-side-slide-text">Exclusive offers just for you</div>
-          <button class="mtag-side-slide-btn" onclick="mtagOpen('https://omg10.com/4/ZONE_ID_1')">Claim →</button>
+        <div class="mtag-side-slide active" data-url="https://omg10.com/4/11211859">
+          <span class="mtag-side-slide-icon">📝</span>
+          <div class="mtag-side-slide-title">Smart Exams</div>
+          <div class="mtag-side-slide-text">MCQ & CQ exams with auto grading</div>
+          <button class="mtag-side-slide-btn" onclick="mtagOpen('https://omg10.com/4/11211859')">Try Free →</button>
         </div>
-        <div class="mtag-side-slide" data-url="https://omg10.com/4/ZONE_ID_2">
-          <span class="mtag-side-slide-icon">🎁</span>
-          <div class="mtag-side-slide-title">Reward</div>
-          <div class="mtag-side-slide-text">Special bonus selected for you</div>
-          <button class="mtag-side-slide-btn" onclick="mtagOpen('https://omg10.com/4/ZONE_ID_2')">Get It →</button>
+        <div class="mtag-side-slide" data-url="https://omg10.com/4/11211860">
+          <span class="mtag-side-slide-icon">👥</span>
+          <div class="mtag-side-slide-title">Track Students</div>
+          <div class="mtag-side-slide-text">Progress & attendance in real time</div>
+          <button class="mtag-side-slide-btn" onclick="mtagOpen('https://omg10.com/4/11211860')">Start Now →</button>
         </div>
-        <div class="mtag-side-slide" data-url="https://omg10.com/4/ZONE_ID_3">
-          <span class="mtag-side-slide-icon">💰</span>
-          <div class="mtag-side-slide-title">Earn Cash</div>
-          <div class="mtag-side-slide-text">Work from anywhere online</div>
-          <button class="mtag-side-slide-btn" onclick="mtagOpen('https://omg10.com/4/ZONE_ID_3')">Start →</button>
+        <div class="mtag-side-slide" data-url="https://omg10.com/4/11211861">
+          <span class="mtag-side-slide-icon">💳</span>
+          <div class="mtag-side-slide-title">Free Plan</div>
+          <div class="mtag-side-slide-text">5 students, $0 forever. No card needed</div>
+          <button class="mtag-side-slide-btn" onclick="mtagOpen('https://omg10.com/4/11211861')">Get Started →</button>
+        </div>
+        <div class="mtag-side-footer">
+          <span class="mtag-side-ad-label">Sponsored</span>
         </div>
       </div>
     </div>
+
+    <!-- Left Side Widget -->
     <div id="mtag-side-l" class="mtag-side-widget">
-      <div class="mtag-side-tab" id="mtag-tab-l" onclick="mtagTabClick('l')" style="writing-mode:vertical-lr;transform:rotate(180deg)">AD</div>
+      <div class="mtag-side-tab" id="mtag-tab-l" onclick="mtagTabClick('l')" style="writing-mode:vertical-lr;transform:rotate(180deg)">Tuition Core</div>
       <div class="mtag-side-panel" id="mtag-panel-l">
-        <div class="mtag-side-panel-header">
-          <span class="mtag-side-panel-title">Sponsored</span>
-          <span class="mtag-ad-chip">AD</span>
+        <div class="mtag-side-brand">
+          <span class="mtag-side-brand-icon">📚</span>
+          <span class="mtag-side-brand-name">Tuition Core</span>
         </div>
-        <div class="mtag-side-slide active" data-url="https://omg10.com/4/ZONE_ID_1">
-          <span class="mtag-side-slide-icon">🚀</span>
-          <div class="mtag-side-slide-title">Level Up</div>
-          <div class="mtag-side-slide-text">Tools to grow your income fast</div>
-          <button class="mtag-side-slide-btn" onclick="mtagOpen('https://omg10.com/4/ZONE_ID_1')">Explore →</button>
+        <div class="mtag-side-slide active" data-url="https://omg10.com/4/11211859">
+          <span class="mtag-side-slide-icon">📅</span>
+          <div class="mtag-side-slide-title">Class Schedule</div>
+          <div class="mtag-side-slide-text">Auto calendar, attendance & live updates</div>
+          <button class="mtag-side-slide-btn" onclick="mtagOpen('https://omg10.com/4/11211859')">Explore →</button>
         </div>
-        <div class="mtag-side-slide" data-url="https://omg10.com/4/ZONE_ID_2">
-          <span class="mtag-side-slide-icon">⚡</span>
-          <div class="mtag-side-slide-title">Smart Deal</div>
-          <div class="mtag-side-slide-text">Flash offer ending very soon</div>
-          <button class="mtag-side-slide-btn" onclick="mtagOpen('https://omg10.com/4/ZONE_ID_2')">View →</button>
+        <div class="mtag-side-slide" data-url="https://omg10.com/4/11211860">
+          <span class="mtag-side-slide-icon">🔔</span>
+          <div class="mtag-side-slide-title">Notifications</div>
+          <div class="mtag-side-slide-text">Push alerts across all devices instantly</div>
+          <button class="mtag-side-slide-btn" onclick="mtagOpen('https://omg10.com/4/11211860')">Learn More →</button>
         </div>
-        <div class="mtag-side-slide" data-url="https://omg10.com/4/ZONE_ID_3">
-          <span class="mtag-side-slide-icon">🌟</span>
-          <div class="mtag-side-slide-title">Top Rated</div>
-          <div class="mtag-side-slide-text">Most popular pick this week</div>
-          <button class="mtag-side-slide-btn" onclick="mtagOpen('https://omg10.com/4/ZONE_ID_3')">See →</button>
+        <div class="mtag-side-slide" data-url="https://omg10.com/4/11211861">
+          <span class="mtag-side-slide-icon">☁️</span>
+          <div class="mtag-side-slide-title">Cloud Sync</div>
+          <div class="mtag-side-slide-text">Google Drive integration & secure storage</div>
+          <button class="mtag-side-slide-btn" onclick="mtagOpen('https://omg10.com/4/11211861')">See More →</button>
+        </div>
+        <div class="mtag-side-footer">
+          <span class="mtag-side-ad-label">Sponsored</span>
         </div>
       </div>
     </div>
+
     <script>
     (function(){
       var panelState = { r: false, l: false };
@@ -1499,10 +1533,19 @@
       box-shadow: 0 6px 24px rgba(0,0,0,0.5);
       cursor: pointer; pointer-events: all;
       animation: cpushIn 0.4s cubic-bezier(.22,.68,0,1.2) forwards;
+      position: relative;
     }
     .cpush-card.out { animation: cpushOut 0.35s ease forwards; }
     @keyframes cpushIn  { from { transform: translateX(110%); opacity:0; } to { transform: translateX(0); opacity:1; } }
     @keyframes cpushOut { from { transform: translateX(0); opacity:1; } to { transform: translateX(110%); opacity:0; } }
+    .cpush-chip {
+      position: absolute; bottom: 7px; left: 12px;
+      display: inline-block; background: rgba(253,184,19,0.15);
+      border: 1px solid rgba(253,184,19,0.4); color: #fdb813;
+      font-size: 0.52rem; font-weight: 800; padding: 2px 6px;
+      border-radius: 4px; letter-spacing: 0.1em;
+      flex-shrink: 0;
+    }
     .cpush-icon  { font-size: 1.5rem; flex-shrink: 0; line-height: 1; }
     .cpush-body  { flex: 1; min-width: 0; }
     .cpush-title { font-size: 0.78rem; font-weight: 700; color: #f0f0f0; margin-bottom: 3px; }
@@ -1518,9 +1561,9 @@
     <script>
     (function(){
       var zones = [
-        'https://omg10.com/4/ZONE_ID_1',
-        'https://omg10.com/4/ZONE_ID_2',
-        'https://omg10.com/4/ZONE_ID_3'
+        'https://omg10.com/4/11211859',
+        'https://omg10.com/4/11211860',
+        'https://omg10.com/4/11211861'
       ];
       var pool = [
         { icon:'🔥', title:'Hot Deal Alert!',      text:'Exclusive offers waiting — claim before they expire!', url:zones[0] },
@@ -1539,6 +1582,7 @@
         var card = document.createElement('div');
         card.className = 'cpush-card';
         card.innerHTML =
+          '<span class="cpush-chip">AD</span>' +
           '<span class="cpush-icon">' + data.icon + '</span>' +
           '<div class="cpush-body">' +
             '<div class="cpush-title">' + data.title + '</div>' +
