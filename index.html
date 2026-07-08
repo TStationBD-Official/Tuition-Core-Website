@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer-when-downgrade" />
     <title>Tuition Core - Transform Your Online Teaching</title>
     <meta name="package" content="tuition_core">
     <link rel="icon" type="image/png" href="logo.png">
@@ -1209,69 +1210,292 @@
         <!-- Hilltop Video Ad -->
         <style>
         #hilltop-video-ad {
-            max-width: 1400px;
-            margin: 24px auto 0;
-            padding: 0 2rem 24px;
+            max-width: 980px;
+            margin: 12px auto 0;
+            padding: 0 0.75rem 12px;
+        }
+        .hilltop-video-grid {
+            display: grid;
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+            gap: 6px;
         }
         .hilltop-video-card {
             background: linear-gradient(135deg, #0d2d4a 0%, #001a33 100%);
             border: 1px solid rgba(253,184,19,0.35);
-            border-radius: 16px;
-            padding: 18px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 16px;
+            border-radius: 12px;
+            padding: 6px;
+            display: grid;
+            gap: 6px;
             box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+        }
+        .hilltop-video-stage {
+            width: 100%;
+            aspect-ratio: 1 / 0.9;
+            position: relative;
+            border-radius: 8px;
+            background: #000;
+            overflow: hidden;
+            filter: blur(10px);
+            transform: scale(1.06);
+        }
+        .hilltop-video-stage video,
+        .hilltop-video-stage iframe,
+        .hilltop-video-stage .ima-ad-container {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        .hilltop-video-stage video {
+            object-fit: cover;
+        }
+        .hilltop-video-stage::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.18);
         }
         .hilltop-video-label {
             display: inline-block;
-            font-size: 0.72rem;
+            font-size: 0.52rem;
             font-weight: 800;
             letter-spacing: 0.12em;
             text-transform: uppercase;
             color: #fdb813;
-            margin-bottom: 8px;
+            margin-bottom: 4px;
         }
         .hilltop-video-title {
-            font-size: 1.1rem;
+            font-size: 0.8rem;
             font-weight: 700;
             color: #f0f0f0;
-            margin-bottom: 4px;
+            margin-bottom: 2px;
         }
         .hilltop-video-text {
             color: #b0b0b0;
-            font-size: 0.95rem;
+            font-size: 0.62rem;
         }
-        .hilltop-video-actions {
-            flex-shrink: 0;
+        .hilltop-video-status {
+            color: #f0f0f0;
+            font-size: 0.58rem;
+            margin-top: 4px;
+        }
+        .hilltop-video-meta {
+            display: grid;
+            gap: 4px;
+        }
+        .hilltop-video-actions .cta-button {
+            padding: 0.42rem 0.65rem;
+            font-size: 0.6rem;
         }
         @media (max-width: 768px) {
             #hilltop-video-ad {
-                padding: 0 1rem 24px;
+                max-width: 100%;
+                padding: 0 0.75rem 12px;
+            }
+            .hilltop-video-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
             }
             .hilltop-video-card {
-                flex-direction: column;
-                align-items: flex-start;
+                padding: 5px;
             }
             .hilltop-video-actions .cta-button {
                 width: 100%;
                 text-align: center;
             }
         }
+        @media (max-width: 480px) {
+            .hilltop-video-grid {
+                grid-template-columns: 1fr;
+            }
+        }
         </style>
         <section id="hilltop-video-ad" aria-label="Hilltop video advertisement">
-                <div class="hilltop-video-card">
+            <div class="hilltop-video-grid">
+                <div class="hilltop-video-card hilltop-ad-slot" data-vast-tag-url="https://physicaldad.com/dgmJF.zSd/GCNLviZ/GRUS/oe/m/9pukZRUylnk/PGT_czyVMUDoQiz/MjjBUXtWN/zBIlw/NTD/MRyUOsSIZdstaeW/1KpEdyDx0-xk">
+                    <div class="hilltop-video-stage">
+                            <video class="hilltop-content-video" muted playsinline preload="auto"></video>
+                            <div class="hilltop-ad-container ima-ad-container"></div>
+                    </div>
+                    <div class="hilltop-video-meta">
                         <div>
-                                <div class="hilltop-video-label">Sponsored Video</div>
-                                <div class="hilltop-video-title">Hilltop Video Ad</div>
-                                <div class="hilltop-video-text">Open this separate video ad destination in a new tab.</div>
+                            <div class="hilltop-video-label">Sponsored Video</div>
+                            <div class="hilltop-video-title">Hilltop Ad 1</div>
+                            <div class="hilltop-video-text">Muted autoplay slot with VAST tracking.</div>
+                            <div class="hilltop-video-status">Loading ad...</div>
                         </div>
                         <div class="hilltop-video-actions">
-                                <a href="https://physicaldad.com/dym/FGzed.G-NAvQZfGYUH/xeHmU9/ufZsURlQkVPWTMc/ySMHDwQmzjMTjFU/tjNRzGIwwQNXDOM/ysO/SlZPspadWN1bpAdqDz0Kxk" target="_blank" rel="noopener noreferrer" class="cta-button">Watch Video</a>
+                            <a href="https://physicaldad.com/dym/FGzed.G-NAvQZfGYUH/xeHmU9/ufZsURlQkVPWTMc/ySMHDwQmzjMTjFU/tjNRzGIwwQNXDOM/ysO/SlZPspadWN1bpAdqDz0Kxk" target="_blank" rel="noopener noreferrer" class="cta-button">Open Ad</a>
                         </div>
+                    </div>
+                    </div>
+                <div class="hilltop-video-card hilltop-ad-slot" data-vast-tag-url="https://physicaldad.com/dgmJF.zSd/GCNLviZ/GRUS/oe/m/9pukZRUylnk/PGT_czyVMUDoQiz/MjjBUXtWN/zBIlw/NTD/MRyUOsSIZdstaeW/1KpEdyDx0-xk">
+                    <div class="hilltop-video-stage">
+                            <video class="hilltop-content-video" muted playsinline preload="auto"></video>
+                            <div class="hilltop-ad-container ima-ad-container"></div>
+                    </div>
+                    <div class="hilltop-video-meta">
+                        <div>
+                            <div class="hilltop-video-label">Sponsored Video</div>
+                            <div class="hilltop-video-title">Hilltop Ad 2</div>
+                            <div class="hilltop-video-text">Muted autoplay slot with VAST tracking.</div>
+                            <div class="hilltop-video-status">Loading ad...</div>
+                        </div>
+                        <div class="hilltop-video-actions">
+                            <a href="https://physicaldad.com/dym/FGzed.G-NAvQZfGYUH/xeHmU9/ufZsURlQkVPWTMc/ySMHDwQmzjMTjFU/tjNRzGIwwQNXDOM/ysO/SlZPspadWN1bpAdqDz0Kxk" target="_blank" rel="noopener noreferrer" class="cta-button">Open Ad</a>
+                        </div>
+                    </div>
                 </div>
+                <div class="hilltop-video-card hilltop-ad-slot" data-vast-tag-url="https://physicaldad.com/dgmJF.zSd/GCNLviZ/GRUS/oe/m/9pukZRUylnk/PGT_czyVMUDoQiz/MjjBUXtWN/zBIlw/NTD/MRyUOsSIZdstaeW/1KpEdyDx0-xk">
+                    <div class="hilltop-video-stage">
+                            <video class="hilltop-content-video" muted playsinline preload="auto"></video>
+                            <div class="hilltop-ad-container ima-ad-container"></div>
+                    </div>
+                    <div class="hilltop-video-meta">
+                        <div>
+                            <div class="hilltop-video-label">Sponsored Video</div>
+                            <div class="hilltop-video-title">Hilltop Ad 3</div>
+                            <div class="hilltop-video-text">Muted autoplay slot with VAST tracking.</div>
+                            <div class="hilltop-video-status">Loading ad...</div>
+                        </div>
+                        <div class="hilltop-video-actions">
+                            <a href="https://physicaldad.com/dym/FGzed.G-NAvQZfGYUH/xeHmU9/ufZsURlQkVPWTMc/ySMHDwQmzjMTjFU/tjNRzGIwwQNXDOM/ysO/SlZPspadWN1bpAdqDz0Kxk" target="_blank" rel="noopener noreferrer" class="cta-button">Open Ad</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
+
+        <script src="https://imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
+        <script>
+        (function() {
+            function initSlot(slot) {
+                var vastTagUrl = slot.getAttribute('data-vast-tag-url');
+                var videoElement = slot.querySelector('.hilltop-content-video');
+                var adContainer = slot.querySelector('.hilltop-ad-container');
+                var statusElement = slot.querySelector('.hilltop-video-status');
+                var adDisplayContainer;
+                var adsLoader;
+                var adsManager;
+                var adRequested = false;
+                var retryTimer = null;
+
+                function clearRetryTimer() {
+                    if (retryTimer) {
+                        clearTimeout(retryTimer);
+                        retryTimer = null;
+                    }
+                }
+
+                function setStatus(message) {
+                    if (statusElement) {
+                        statusElement.textContent = message;
+                    }
+                }
+
+                function destroyAdsManager() {
+                    if (adsManager) {
+                        try { adsManager.destroy(); } catch (e) {}
+                        adsManager = null;
+                    }
+                }
+
+                function requestNextAd(delayMs) {
+                    clearRetryTimer();
+                    adRequested = false;
+                    destroyAdsManager();
+                    retryTimer = setTimeout(function() {
+                        initializeAds();
+                    }, delayMs || 0);
+                }
+
+                function onAdError(error) {
+                    console.error('Hilltop VAST error:', error);
+                    setStatus('Ad could not be loaded.');
+                    requestNextAd(3000);
+                }
+
+                function initializeAds() {
+                    if (!window.google || !google.ima || adRequested || !videoElement || !adContainer) {
+                        return;
+                    }
+
+                    adDisplayContainer = new google.ima.AdDisplayContainer(adContainer, videoElement);
+                    adsLoader = new google.ima.AdsLoader(adDisplayContainer);
+                    adsLoader.addEventListener(google.ima.AdsManagerLoadedEvent.Type.ADS_MANAGER_LOADED, function(event) {
+                        adsManager = event.getAdsManager(videoElement);
+                        adsManager.addEventListener(google.ima.AdErrorEvent.Type.AD_ERROR, onAdError);
+                        adsManager.addEventListener(google.ima.AdEvent.Type.LOADED, function() {
+                            setStatus('Ad loaded.');
+                        });
+                        adsManager.addEventListener(google.ima.AdEvent.Type.STARTED, function() {
+                            setStatus('Ad playing.');
+                        });
+                        adsManager.addEventListener(google.ima.AdEvent.Type.COMPLETE, function() {
+                            setStatus('Ad complete. Loading next ad...');
+                            requestNextAd(1000);
+                        });
+                        adsManager.addEventListener(google.ima.AdEvent.Type.SKIPPED, function() {
+                            setStatus('Ad skipped. Loading next ad...');
+                            requestNextAd(1000);
+                        });
+                        try {
+                            adsManager.init(adContainer.clientWidth, adContainer.clientHeight, google.ima.ViewMode.NORMAL);
+                            adsManager.start();
+                        } catch (e) {
+                            onAdError(e);
+                        }
+                    }, false);
+
+                    adsLoader.addEventListener(google.ima.AdErrorEvent.Type.AD_ERROR, onAdError);
+
+                    var adsRequest = new google.ima.AdsRequest();
+                    adsRequest.adTagUrl = vastTagUrl;
+                    adsRequest.linearAdSlotWidth = adContainer.clientWidth;
+                    adsRequest.linearAdSlotHeight = adContainer.clientHeight;
+                    adsRequest.nonLinearAdSlotWidth = adContainer.clientWidth;
+                    adsRequest.nonLinearAdSlotHeight = Math.max(90, Math.floor(adContainer.clientHeight / 3));
+                    adRequested = true;
+
+                    try {
+                        adDisplayContainer.initialize();
+                        adsLoader.requestAds(adsRequest);
+                        setStatus('Requesting ad...');
+                    } catch (e) {
+                        onAdError(e);
+                    }
+                }
+
+                function bindResize() {
+                    window.addEventListener('resize', function() {
+                        if (adsManager) {
+                            try {
+                                adsManager.resize(adContainer.clientWidth, adContainer.clientHeight, google.ima.ViewMode.NORMAL);
+                            } catch (e) {}
+                        }
+                    });
+                }
+
+                function waitForSdk() {
+                    if (window.google && google.ima) {
+                        initializeAds();
+                        bindResize();
+                        return;
+                    }
+                    setTimeout(waitForSdk, 300);
+                }
+
+                window.addEventListener('beforeunload', function() {
+                    clearRetryTimer();
+                    destroyAdsManager();
+                });
+
+                waitForSdk();
+            }
+
+            document.querySelectorAll('.hilltop-ad-slot').forEach(initSlot);
+        })();
+        </script>
 
     <!-- ===== MONETAG AD COMPONENTS ===== -->
 
