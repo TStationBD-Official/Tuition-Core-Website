@@ -158,20 +158,39 @@
             transform: translateY(-2px);
             box-shadow: 0 10px 30px rgba(253, 184, 19, 0.4);
         }
+
+        img { max-width: 100%; height: auto; }
+
+        @media (max-width: 768px) {
+            .header-content { flex-wrap: wrap; gap: 0.75rem; }
+            .header-content h1 { font-size: 1.2rem; }
+            .container { padding: 2rem 1.25rem; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.4rem; margin: 2rem 0 1rem 0; }
+            h3 { font-size: 1.15rem; }
+            ul, ol { margin-left: 1.25rem; }
+        }
+
+        @media (max-width: 480px) {
+            header { padding: 1rem 1.25rem; }
+            .container { padding: 1.5rem 1rem; }
+            h1 { font-size: 1.6rem; }
+            h2 { font-size: 1.25rem; }
+            .back-button { width: 100%; text-align: center; }
+            .update-date { padding: 1rem; font-size: 0.9rem; }
+        }
     </style>
-    <!-- Adsterra Popunder -->
-    <script src="https://pl30419411.effectivecpmnetwork.com/73/75/43/7375438e93d2d0f27fec277aff56274f.js"></script>
 </head>
 <body>
     <header>
         <div class="header-content">
             <h1 style="margin: 0; font-size: 1.5rem;">Privacy Policy</h1>
-            <a href="website.html">← Back to Home</a>
+            <a href="index.html">← Back to Home</a>
         </div>
     </header>
 
     <div class="container">
-        <a href="website.html" class="back-button">← Back to Home</a>
+        <a href="index.html" class="back-button">← Back to Home</a>
 
         <div class="update-date">
             <strong>Last Updated:</strong> June 18, 2026 | <strong>Version:</strong> 1.0.0 | <strong>Package:</strong> tuition_core
@@ -570,10 +589,8 @@
 
     <footer>
         <p>&copy; 2026 Tuition Core Inc. All rights reserved.</p>
-        <p><a href="website.html" style="color: var(--accent-gold); text-decoration: none;">Back to Home</a> | <a href="terms.html" style="color: var(--accent-gold); text-decoration: none;">Terms & Conditions</a></p>
+        <p><a href="index.html" style="color: var(--accent-gold); text-decoration: none;">Back to Home</a> | <a href="terms.html" style="color: var(--accent-gold); text-decoration: none;">Terms & Conditions</a></p>
     </footer>
-    <!-- Adsterra Social Bar -->
-    <script src="https://pl30419412.effectivecpmnetwork.com/db/da/d4/dbdad46d02c15214d9fb9c79338308e7.js"></script>
     <!-- Adsterra rotating direct-link bar -->
     <script src="adsterra-bottom-bar.js"></script>
 </body>

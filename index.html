@@ -60,7 +60,7 @@
             background: rgba(0, 26, 51, 0.95);
             backdrop-filter: blur(10px);
             border-bottom: 2px solid var(--border-color);
-            z-index: 1000;
+            z-index: 1100;
             animation: fadeInUp 0.6s ease-out;
         }
 
@@ -71,6 +71,42 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 1rem;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            gap: 5px;
+            width: 32px;
+            height: 32px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 1100;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 100%;
+            height: 3px;
+            background: var(--accent-gold);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
         }
 
         .logo {
@@ -112,6 +148,16 @@
             display: flex;
             list-style: none;
             gap: 2.5rem;
+        }
+
+        .nav-cta-wrap {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .nav-cta-mobile {
+            display: none;
         }
 
         nav a {
@@ -793,21 +839,108 @@
             cursor: not-allowed;
         }
 
+        img { max-width: 100%; height: auto; }
+
+        @media (max-width: 1024px) {
+            .hero-content { gap: 2rem; }
+            .hero-text h1 { font-size: 3rem; }
+            .icon-container { width: 280px; height: 280px; }
+        }
+
         @media (max-width: 768px) {
-            nav ul { display: none; }
-            .hero-content { grid-template-columns: 1fr; padding: 2rem 1rem; }
-            .hero-text h1 { font-size: 2.2rem; }
-            .icon-container { width: 240px; height: 240px; }
-            .section-title { font-size: 2rem; }
-            .hero-buttons { flex-direction: column; }
-            .hero-buttons button, .hero-buttons a { width: 100%; }
+            nav { padding: 0.85rem 1.25rem; }
+            .logo { font-size: 1.25rem; gap: 0.6rem; }
+            .logo-img { width: 42px; height: 42px; }
+
+            .hamburger { display: flex; }
+            .nav-cta-desktop { display: none; }
+
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: min(78%, 320px);
+                height: 100vh;
+                background: rgba(0, 10, 21, 0.98);
+                backdrop-filter: blur(10px);
+                border-left: 2px solid var(--border-color);
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                gap: 1.75rem;
+                padding: 2rem;
+                transition: right 0.35s ease;
+                z-index: 1050;
+            }
+
+            .nav-links.active { right: 0; }
+
+            .nav-links li { width: 100%; }
+            .nav-links a { font-size: 1.1rem; display: block; width: 100%; }
+
+            .nav-cta-mobile { display: block; margin-top: 0.5rem; }
+            .nav-cta-mobile .cta-button { width: 100%; text-align: center; }
+
+            .nav-overlay {
+                display: none;
+                position: fixed;
+                inset: 0;
+                background: rgba(0, 0, 0, 0.5);
+                z-index: 1040;
+            }
+
+            .nav-overlay.active { display: block; }
+
+            .hero { margin-top: 68px; min-height: calc(100vh - 68px); }
+            .hero-content { grid-template-columns: 1fr; padding: 2.5rem 1.25rem; gap: 2.5rem; text-align: center; }
+            .hero-image { order: -1; }
+            .hero-text h1 { font-size: 2.3rem; }
+            .hero-text p { font-size: 1rem; }
+            .icon-container { width: 220px; height: 220px; }
+            .section-title { font-size: 1.9rem; margin-bottom: 2.5rem; }
+            .hero-buttons { flex-direction: column; align-items: stretch; }
+            .hero-buttons button, .hero-buttons a { width: 100%; text-align: center; }
+
+            .features, .roles-section, .pricing-section, .download-section { padding: 3.5rem 1.25rem; }
+            .features-grid, .roles-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+            .feature-card, .role-card { padding: 2rem; }
+
             .price-card:nth-child(3) { transform: scale(1); }
-            .pricing-toggle { flex-direction: column; gap: 1rem; }
-            .download-grid { grid-template-columns: 1fr 1fr; }
+            .pricing-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+            .pricing-controls { flex-direction: column; gap: 1rem; }
+            .pricing-toggle { flex-direction: column; gap: 1rem; width: 100%; }
+            .toggle-btn { width: 100%; }
+            .currency-selector { width: 100%; }
+
+            .download-grid { grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+            .download-card { padding: 1.75rem 1.25rem; }
+
+            .cta-section { padding: 3.5rem 1.25rem; }
+            .cta-content h2 { font-size: 2rem; }
+
+            .footer-content { grid-template-columns: 1fr 1fr; text-align: left; gap: 1.75rem; }
+        }
+
+        @media (max-width: 480px) {
+            .hero-text h1 { font-size: 1.9rem; }
+            .hero-text p { font-size: 0.95rem; }
+            .icon-container { width: 180px; height: 180px; }
+            .section-title { font-size: 1.6rem; }
+            .btn-primary, .btn-secondary { padding: 0.9rem 1.5rem; font-size: 0.95rem; }
+
+            .feature-card, .role-card, .price-card { padding: 1.5rem; }
+            .price-amount { font-size: 2.2rem; }
+
+            .download-grid { grid-template-columns: 1fr; }
+            .download-card p { white-space: normal; }
+
+            .cta-content h2 { font-size: 1.6rem; }
+            .cta-content p { font-size: 1rem; }
+
+            .footer-content { grid-template-columns: 1fr; text-align: center; }
+            .footer-section a, .footer-section h4 { text-align: center; }
         }
     </style>
-    <!-- Adsterra Popunder -->
-    <script src="https://pl30419411.effectivecpmnetwork.com/73/75/43/7375438e93d2d0f27fec277aff56274f.js"></script>
 </head>
 <body>
     <header>
@@ -818,17 +951,24 @@
                 </div>
                 <span class="logo-text">TuitionCore</span>
             </a>
-            <ul>
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#features">Features</a></li>
                 <li><a href="#roles">Roles</a></li>
                 <li><a href="#pricing">Pricing</a></li>
                 <li><a href="#download">Download</a></li>
                 <li><a href="terms.html">Terms</a></li>
                 <li><a href="privacy.html">Privacy</a></li>
+                <li class="nav-cta-mobile"><a href="https://wa.me/8801952788431?text=Hi%20Tuition%20Core%20Team!%20I%27m%20interested%20in%20your%20services.%20Can%20you%20help%20me%20get%20started?" target="_blank" class="cta-button">WhatsApp</a></li>
             </ul>
-            <a href="https://wa.me/8801952788431?text=Hi%20Tuition%20Core%20Team!%20I%27m%20interested%20in%20your%20services.%20Can%20you%20help%20me%20get%20started?" target="_blank" class="cta-button">WhatsApp</a>
+            <div class="nav-cta-wrap">
+                <a href="https://wa.me/8801952788431?text=Hi%20Tuition%20Core%20Team!%20I%27m%20interested%20in%20your%20services.%20Can%20you%20help%20me%20get%20started?" target="_blank" class="cta-button nav-cta-desktop">WhatsApp</a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" onclick="toggleMenu()">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
         </nav>
     </header>
+    <div class="nav-overlay" id="navOverlay" onclick="closeMenu()"></div>
 
     <section class="hero" id="home">
         <div class="hero-content">
@@ -1297,9 +1437,34 @@
             document.getElementById('currencySelect').value = currentCurrency;
             updateAllPrices();
         }
+
+        // Mobile nav menu
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        const navOverlay = document.getElementById('navOverlay');
+
+        function toggleMenu() {
+            const isOpen = navLinks.classList.toggle('active');
+            navOverlay.classList.toggle('active', isOpen);
+            hamburger.classList.toggle('active', isOpen);
+            hamburger.setAttribute('aria-expanded', isOpen);
+            document.body.style.overflow = isOpen ? 'hidden' : '';
+        }
+
+        function closeMenu() {
+            navLinks.classList.remove('active');
+            navOverlay.classList.remove('active');
+            hamburger.classList.remove('active');
+            hamburger.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+        }
+
+        navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) closeMenu();
+        });
     </script>
-    <!-- Adsterra Social Bar -->
-    <script src="https://pl30419412.effectivecpmnetwork.com/db/da/d4/dbdad46d02c15214d9fb9c79338308e7.js"></script>
     <!-- Adsterra rotating direct-link bar -->
     <script src="adsterra-bottom-bar.js"></script>
 </body>
