@@ -4,7 +4,12 @@
         "https://www.effectivecpmnetwork.com/e3jc3pv2?key=c22468d379af231bc387c69fd72ccf12",
         "https://www.effectivecpmnetwork.com/t5uma0kz?key=36b3643f192ed6e2195c98c447e0b961",
         "https://www.effectivecpmnetwork.com/namy6vap88?key=b04c98b24b0b3db1b784b673e3e3d028",
-        "https://www.effectivecpmnetwork.com/aunqwwk29?key=74a682f2622b8b6d1f9eb680da700df5"
+        "https://www.effectivecpmnetwork.com/aunqwwk29?key=74a682f2622b8b6d1f9eb680da700df5",
+        "https://www.effectivecpmnetwork.com/gf0nzp5sw?key=1d7fce7cbfa7da4da9b49998f85f4278",
+        "https://www.effectivecpmnetwork.com/dtmfk5t5zi?key=9f3630f71de660db516498c675fca203",
+        "https://www.effectivecpmnetwork.com/efjxag8qtb?key=1c006e372a9275f65e6b1fa2df250ede",
+        "https://www.effectivecpmnetwork.com/thrwxiur5m?key=ca56409c3820684fb8c1744d0c699379",
+        "https://www.effectivecpmnetwork.com/b05sw4rm?key=8cabc7025365dcd7e64329c7de6fe462"
     ];
     var ROTATE_MS = 3000;
 
