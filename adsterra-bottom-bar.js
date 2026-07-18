@@ -13,62 +13,42 @@
         '#adsterra-bottom-bar {' +
         '  position: fixed; bottom: 0; left: 0; right: 0; z-index: 9999;' +
         '  background: #000a15; border-top: 1px solid rgba(253,184,19,0.3);' +
-        '  display: flex; align-items: center; gap: 12px;' +
-        '  padding: 10px 16px; font-family: "Poppins", sans-serif;' +
-        '}' +
-        '#adsterra-bottom-bar-meta {' +
-        '  display: flex; flex-direction: column; align-items: flex-start; flex-shrink: 0;' +
-        '}' +
-        '#adsterra-bottom-bar-chip {' +
-        '  display: inline-block; background: rgba(253,184,19,0.15);' +
-        '  border: 1px solid rgba(253,184,19,0.4); color: #fdb813;' +
-        '  font-size: 0.55rem; font-weight: 800; padding: 1px 5px;' +
-        '  border-radius: 4px; letter-spacing: 0.08em;' +
-        '}' +
-        '#adsterra-bottom-bar-label {' +
-        '  font-size: 0.6rem; color: #b0b0b0; margin-top: 2px;' +
-        '}' +
-        '#adsterra-bottom-bar-link {' +
-        '  flex: 1; min-width: 0; display: flex; align-items: center; gap: 10px;' +
-        '  text-decoration: none; color: #f0f0f0; cursor: pointer;' +
-        '}' +
-        '#adsterra-bottom-bar-text {' +
-        '  font-size: 0.78rem; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;' +
-        '}' +
-        '#adsterra-bottom-bar-btn {' +
-        '  background: linear-gradient(135deg,#fdb813,#ffc93d); color: #000a15;' +
-        '  border: none; border-radius: 6px; padding: 6px 14px;' +
-        '  font-size: 0.72rem; font-weight: 700; flex-shrink: 0;' +
+        '  display: flex; flex-direction: column; align-items: center;' +
         '  font-family: "Poppins", sans-serif;' +
         '}' +
-        '#adsterra-bottom-bar-close {' +
-        '  background: none; border: none; color: #b0b0b0; cursor: pointer;' +
-        '  font-size: 1rem; padding: 4px; flex-shrink: 0;' +
+        '#adsterra-bottom-bar-label {' +
+        '  font-size: 0.55rem; font-weight: 700; letter-spacing: 0.1em;' +
+        '  text-transform: uppercase; color: #b0b0b0; padding: 3px 0 2px;' +
         '}' +
-        '#adsterra-bottom-bar-close:hover { color: #f0f0f0; }' +
-        '@media (max-width: 600px) {' +
-        '  #adsterra-bottom-bar { padding: 8px 10px; gap: 8px; }' +
-        '  #adsterra-bottom-bar-meta { display: none; }' +
+        '#adsterra-bottom-bar-frame-wrap {' +
+        '  width: 100%; max-width: 728px; height: 100px; position: relative; background: #000;' +
+        '}' +
+        '#adsterra-bottom-bar-frame-wrap iframe {' +
+        '  width: 100%; height: 100%; border: 0; display: block;' +
+        '}' +
+        '#adsterra-bottom-bar-close {' +
+        '  position: absolute; top: 2px; right: 6px; background: rgba(0,0,0,0.5); border: none;' +
+        '  color: #fff; font-size: 0.85rem; line-height: 1; cursor: pointer; z-index: 2; padding: 2px 7px; border-radius: 4px;' +
+        '}' +
+        '#adsterra-bottom-bar-close:hover { background: rgba(0,0,0,0.8); }' +
+        '@media (max-width: 480px) {' +
+        '  #adsterra-bottom-bar-frame-wrap { height: 70px; }' +
         '}';
     document.head.appendChild(style);
 
     var bar = document.createElement('div');
     bar.id = 'adsterra-bottom-bar';
     bar.innerHTML =
-        '<div id="adsterra-bottom-bar-meta">' +
-        '<span id="adsterra-bottom-bar-chip">AD</span>' +
-        '<span id="adsterra-bottom-bar-label">Sponsored</span>' +
-        '</div>' +
-        '<a id="adsterra-bottom-bar-link" target="_blank" rel="noopener noreferrer sponsored">' +
-        '<span id="adsterra-bottom-bar-text">Check out this offer</span>' +
-        '<span id="adsterra-bottom-bar-btn">View</span>' +
-        '</a>' +
-        '<button id="adsterra-bottom-bar-close" title="Close" aria-label="Close ad">&times;</button>';
+        '<span id="adsterra-bottom-bar-label">Advertisement</span>' +
+        '<div id="adsterra-bottom-bar-frame-wrap">' +
+        '<button id="adsterra-bottom-bar-close" title="Close" aria-label="Close ad">&times;</button>' +
+        '<iframe id="adsterra-bottom-bar-frame" scrolling="no" sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-forms"></iframe>' +
+        '</div>';
 
     function init() {
         document.body.appendChild(bar);
 
-        var link = document.getElementById('adsterra-bottom-bar-link');
+        var frame = document.getElementById('adsterra-bottom-bar-frame');
         var lastIndex = -1;
         var timer;
 
@@ -78,7 +58,7 @@
                 idx = Math.floor(Math.random() * links.length);
             } while (idx === lastIndex && links.length > 1);
             lastIndex = idx;
-            link.href = links[idx];
+            frame.src = links[idx];
         }
 
         document.getElementById('adsterra-bottom-bar-close').addEventListener('click', function () {
